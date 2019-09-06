@@ -61,3 +61,30 @@
 .tabs__item--active{
     display: block;
 }
+
+
+
+.modal{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.modal__content{
+    background-color: white;
+    padding: 10px;
+}
+
+.wrapper{
+    filter: blur(2px);
+}
+
+body{
+    overflow: hidden;
+}
