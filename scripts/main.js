@@ -22,6 +22,14 @@ function handleLoad() {
         btn.addEventListener('click', handleClick);
     }
     buttons.forEach(iterateButtons);
+
+    // rango para opacidad
+    var range = document.querySelector('input');
+    var tabs = document.querySelector('.tabs');
+    function handleRange () {
+        tabs.style.opacity = range.value / 100;
+    }
+    range.addEventListener('input', handleRange);
 }
 
 window.addEventListener('load', handleLoad);
