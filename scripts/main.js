@@ -39,6 +39,9 @@ function handleLoad() {
         wrapper.classList.add('wrapper--active');
         document.body.classList.add('noscroll');
         modal.classList.add('modal--active');
+        setTimeout(function(){
+            modal.classList.add('modal--show');
+        }, 100);
     }
     modalBtn.addEventListener('click', handleOpenModal);
 
@@ -46,7 +49,10 @@ function handleLoad() {
         if(event.target == modal){
             wrapper.classList.remove('wrapper--active');
             document.body.classList.remove('noscroll');
-            modal.classList.remove('modal--active');
+            modal.classList.remove('modal--show');
+            setTimeout(function(){
+                modal.classList.remove('modal--active');
+            }, 700);
         }
     }
     modal.addEventListener('click', handleCloseModal);
