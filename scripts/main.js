@@ -30,6 +30,26 @@ function handleLoad() {
         tabs.style.opacity = range.value / 100;
     }
     range.addEventListener('input', handleRange);
+
+
+    var modalBtn = document.querySelector('button');
+    var modal = document.querySelector('.modal');
+    var wrapper = document.querySelector('.wrapper');
+    function handleOpenModal(){
+        wrapper.classList.add('wrapper--active');
+        document.body.classList.add('noscroll');
+        modal.classList.add('modal--active');
+    }
+    modalBtn.addEventListener('click', handleOpenModal);
+
+    function handleCloseModal(event){
+        if(event.target == modal){
+            wrapper.classList.remove('wrapper--active');
+            document.body.classList.remove('noscroll');
+            modal.classList.remove('modal--active');
+        }
+    }
+    modal.addEventListener('click', handleCloseModal);
 }
 
 window.addEventListener('load', handleLoad);

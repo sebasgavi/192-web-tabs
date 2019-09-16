@@ -71,9 +71,13 @@
     right: 0px;
     bottom: 0px;
     background-color: rgba(0,0,0,.2);
-    display: flex;
+    display: none;
     align-items: center;
     padding: 30px;
+}
+
+.modal--active{
+    display: flex;
 }
 
 .modal__content{
@@ -81,10 +85,11 @@
     padding: 10px;
 }
 
-.wrapper{
+.wrapper--active{
     filter: blur(2px);
+    pointer-events: none;
 }
 
-body{
+.noscroll{
     overflow: hidden;
 }
