@@ -52,10 +52,21 @@ function handleLoad() {
             modal.classList.remove('modal--show');
             setTimeout(function(){
                 modal.classList.remove('modal--active');
-            }, 700);
+            }, 100);
         }
     }
     modal.addEventListener('click', handleCloseModal);
+
+
+
+
+    var newElement = document.createElement('div');
+    //newElement.style.background = 'black';
+    newElement.classList.add('tooltip');
+    newElement.innerHTML = '<h3>título</h3><p>el texto</p>';
+    document.body.appendChild(newElement);
+    
+
 }
 
 window.addEventListener('load', handleLoad);

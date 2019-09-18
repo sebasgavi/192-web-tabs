@@ -1,0 +1,125 @@
+
+.tabs{
+
+}
+
+.tabs__nav{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tabs__btn{
+    margin: 0px 10px;
+    background: none;
+    border: none;
+    padding: 4px 6px;
+    outline: none;
+}
+
+.btline{
+    position: relative;
+    cursor: pointer;
+}
+
+.btline::after{
+    content: '';
+    height: 2px;
+    background: red;
+    position: absolute;
+    bottom: 0px;
+    /*width: 0%;
+    left: 50%;
+    transition: all .3s ease;*/
+    width: 100%;
+    left: 0px;
+    transition: transform .3s ease;
+    transform: scale(0, 1);
+}
+
+.btline:hover::after{
+    /*width: 100%;
+    left: 0%;*/
+    transform: scale(1, 1);
+}
+
+.btline:focus::after{
+    transform: scale(1, 1);
+}
+
+.btline--active::after{
+    transform: scale(1, 1);
+}
+
+.tabs__content{
+
+}
+
+.tabs__item{
+    display: none;
+}
+
+.tabs__item--active{
+    display: block;
+}
+
+
+
+.modal{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,.2);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity .7s ease;
+}
+
+.modal--active{
+    display: flex;
+}
+
+.modal--show{
+    opacity: 1;
+}
+
+.modal__content{
+    background-color: white;
+    padding: 10px;
+}
+
+.wrapper{
+    transition: filter .7s ease;
+}
+
+.wrapper--active{
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.noscroll{
+    overflow: hidden;
+}
+
+.tooltip{
+  position: relative;
+
+  &__message{
+    opacity: 0;
+    transition: opacity .6s ease;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0px);
+    pointer-events: none;
+  }
+
+  &:hover &__message{
+    opacity: 1;
+  }
+}
