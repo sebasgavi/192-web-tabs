@@ -120,7 +120,8 @@
   position: relative;
 }
 
-.tooltip__message {
+.tooltip::after {
+  content: attr(data-message);
   opacity: 0;
   -webkit-transition: opacity .6s ease;
   transition: opacity .6s ease;
@@ -132,7 +133,7 @@
   pointer-events: none;
 }
 
-.tooltip:hover .tooltip__message {
+.tooltip:hover::after {
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

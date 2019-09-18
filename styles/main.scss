@@ -109,7 +109,8 @@
 .tooltip{
   position: relative;
 
-  &__message{
+  &::after{
+    content: attr(data-message);
     opacity: 0;
     transition: opacity .6s ease;
     position: absolute;
@@ -119,7 +120,7 @@
     pointer-events: none;
   }
 
-  &:hover &__message{
+  &:hover::after{
     opacity: 1;
   }
 }
