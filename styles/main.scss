@@ -124,3 +124,17 @@
     opacity: 1;
   }
 }
+
+
+.popover{
+  position: relative;
+
+  &__container{
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(0px, -50%);
+    background-color: lightblue;
+    width: 200px;
+  }
+}

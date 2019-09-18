@@ -67,6 +67,19 @@ function handleLoad() {
     document.body.appendChild(newElement);
     
 
+    var popover = document.querySelector('.popover');
+    function handlePopoverClick(){
+        var title = popover.getAttribute('data-title');
+        var text = popover.getAttribute('data-text');
+        var container = document.createElement('div');
+        container.classList.add('popover__container');
+        container.innerHTML = `
+            <h3>${title}</h3>
+            <p>${text}</p>
+        `;
+        popover.appendChild(container);
+    }
+    popover.addEventListener('click', handlePopoverClick);
 }
 
 window.addEventListener('load', handleLoad);
